@@ -17,23 +17,23 @@ class EigenschaftenPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Preis: ${calculationData.preis}'),
-            Text('Große: ${calculationData.grosse}'),
+            Text('Große: ${calculationData.grosseM2}'),
             TextField(
               onChanged: (value) {
-                calculationData.value1 = double.parse(value);
+                calculationData.zinssatzProzent = double.parse(value);
               },
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                labelText: 'Value 1',
+                labelText: 'Zinssatz in Prozent',
               ),
             ),
             TextField(
               onChanged: (value) {
-                calculationData.value2 = double.parse(value);
+                calculationData.tilgungProzent = double.parse(value);
               },
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                labelText: 'Value 2',
+                labelText: 'Tilgung in Prozent',
               ),
             ),
             ElevatedButton(

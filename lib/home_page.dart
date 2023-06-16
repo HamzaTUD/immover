@@ -25,20 +25,20 @@ class HomePage extends StatelessWidget {
             ),
             TextField(
               onChanged: (value) {
-                Provider.of<CalculationData>(context, listen: false).grosse = double.parse(value);
+                Provider.of<CalculationData>(context, listen: false).grosseM2 = double.parse(value);
               },
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                labelText: 'Große',
+                labelText: 'Große m²',
               ),
             ),
             TextField(
               onChanged: (value) {
-                Provider.of<CalculationData>(context, listen: false).miete = double.parse(value);
+                Provider.of<CalculationData>(context, listen: false).mietzinsProQM = double.parse(value);
               },
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                labelText: 'Miete',
+                labelText: 'Mietzins in Euro pro qm pro Jahr',
               ),
             ),
             ElevatedButton(
